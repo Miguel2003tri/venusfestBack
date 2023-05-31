@@ -1,5 +1,5 @@
 from django.db import models
-
+# Modelo Artista
 class Artista(models.Model):
     nombre = models.CharField(verbose_name='Nombre', max_length=128)
     nombre_artistico = models.CharField(verbose_name='Nombre artístico', max_length=256,default='')
@@ -15,7 +15,7 @@ class Artista(models.Model):
     foto_artista = models.CharField(verbose_name='Images', max_length=256)
 
 
-
+# Modelo Contacto
 class Contacto(models.Model):
     nombre = models.CharField(verbose_name='Nombre', max_length=128)
     telf = models.CharField(verbose_name='Telf', max_length=16,default='')

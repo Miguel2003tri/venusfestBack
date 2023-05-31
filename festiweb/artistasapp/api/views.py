@@ -24,9 +24,9 @@ class ArtistaListViewSet(mixins.ListModelMixin,viewsets.GenericViewSet):
     def get_queryset(self):
         return Artista.objects.all()
 
+#Artista
 
 class ArtistaDetailViewSet(viewsets.ModelViewSet):
-    #UD11.4.a
     """
     Comentario
     """
@@ -50,6 +50,7 @@ class ArtistaDetailViewSet(viewsets.ModelViewSet):
            return Response({"error": "No se puede realizar la operación de borrado porque existen dependencias." + str(e)}, status=status.HTTP_400_BAD_REQUEST)
        return Response(status=status.HTTP_204_NO_CONTENT)
 
+#Contacto
 class ContactoListViewSet(mixins.ListModelMixin,viewsets.GenericViewSet):
 
     """
@@ -63,9 +64,8 @@ class ContactoListViewSet(mixins.ListModelMixin,viewsets.GenericViewSet):
     def get_queryset(self):
         return Contacto.objects.all()
 
-
+#Contacto
 class ContactoDetailViewSet(viewsets.ModelViewSet):
-    #UD11.4.a
     """
     Todas las consultas de contacto    
     """
